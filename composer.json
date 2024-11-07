@@ -1,0 +1,39 @@
+{
+  "name": "rivieratravel/opentelemetry-auto-liip-imagine",
+  "description": "OpenTelemetry auto-instrumentation for LiipImagineBundle",
+  "keywords": ["opentelemetry", "otel", "open-telemetry", "tracing", "LiipImagineBundle", "instrumentation"],
+  "type": "library",
+  "homepage": "https://opentelemetry.io/docs/php",
+  "readme": "./README.md",
+  "license": "Apache-2.0",
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.2",
+    "ext-opentelemetry": "*",
+    "open-telemetry/api": "^1.0",
+    "open-telemetry/sem-conv": "^1.23",
+    "liip/imagine-bundle": "*"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3",
+    "phan/phan": "^5.0",
+    "phpstan/phpstan": "^1.1",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "psalm/plugin-phpunit": "^0.16",
+    "open-telemetry/sdk": "^1.0",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Riviera\\Contrib\\Instrumentation\\LiipImagine\\": "src/"
+    },
+    "files": [
+      "_register.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Riviera\\Tests\\Instrumentation\\LiipImagine\\": "tests/"
+    }
+  }
+}
